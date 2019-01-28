@@ -1,0 +1,38 @@
+INPUT
+Store X
+INPUT
+Store Y
+INPUT
+Store Z
+/ Loop for performing iterative addition
+loop,    Load num
+         Add X
+         Store num
+
+         Load Y
+         Subt one
+         Store Y
+
+         Skipcond 400 / have we completed the multiplication?
+         Jump loop / no; repeat loop
+         / yes, so exit the loop
+loop2,	 Load num
+         Add X
+         Store num
+         
+         Load Z
+         Subt one
+         Store Y
+         
+         Skipcond 400
+         Jump loop2
+/ Output result to user then halt program         
+Load num
+Output
+Halt
+
+X, DEC 0
+Y, DEC 0
+Z, DEC 0
+num, DEC 0
+one, DEC 1
